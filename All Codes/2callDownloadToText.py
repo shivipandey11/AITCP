@@ -16,11 +16,11 @@ if(path.exists("audios")!=True):
 if(path.exists("transcriptions")!=True):
     os.mkdir("transcriptions")
 
-account_sid = 'AC784361ca699d17bc677e1ca842d8d92c'
-auth_token = '096ac2fab84caa158750b3b034499c5e'
+account_sid = '__'
+auth_token = '__'
 
 
-response =requests.get("https://api.twilio.com/2010-04-01/Accounts/AC784361ca699d17bc677e1ca842d8d92c/Recordings",auth=(account_sid, auth_token))       #v1/Recordings        #client.video.v1.Recordings
+response =requests.get("https://api.twilio.com/2010-04-01/Accounts/__/Recordings",auth=(account_sid, auth_token))       #v1/Recordings        #client.video.v1.Recordings
 xmls = BeautifulSoup(response.content,features="lxml")
 
 rid_list = []

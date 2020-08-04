@@ -17,7 +17,7 @@ def record():
     block_call = False
     phoneNumber = request.form.get('From')
     # response.say(phoneNumber)
-    data = pd.read_csv('s3://techno-utsav3-bucket/FlaskServer/Blacklist.csv', dtype=object)
+    data = pd.read_csv('Blacklist.csv', dtype=object)
     phoneNumbers=data.Numbers.tolist()
     print(phoneNumbers)
     if phoneNumber[1:] in phoneNumbers:
